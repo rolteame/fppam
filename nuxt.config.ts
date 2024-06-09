@@ -1,11 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
+  css: ["~/assets/css/main.css","animate.css/animate.min.css"],
   modules: ["@nuxtjs/google-fonts", "@nuxtjs/tailwindcss", "shadcn-nuxt"],
   googleFonts: {
     families: {
-      'Baloo Da 2': true,
-      'Archivo Narrow': true,
+      'Baloo Da 2': [400],
+      'Archivo Narrow': [400, 700],
     }
   },
   shadcn: {

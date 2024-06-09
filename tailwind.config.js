@@ -7,6 +7,10 @@ module.exports = {
   prefix: "",
   
   theme: {
+    fontFamily: {
+      'header': ['Archivo Narrow'],
+      'body': ['Baloo Da 2']
+    },
     container: {
       center: true,
       padding: "2rem",

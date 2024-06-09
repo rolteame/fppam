@@ -66,6 +66,9 @@
  
     --ring: 212.7 26.8% 83.9%;
   }
+  .header-outline {
+    -webkit-text-stroke: 0.15px #FFC700;
+  }
 }
  
 @layer base {
