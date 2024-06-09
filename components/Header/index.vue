@@ -20,7 +20,7 @@
 			<p class="text-lg md:text-2xl lg:text-3xl pt-3 capitalize font-header font-thin">
 				Home of Possibilities
 			</p>
-			<div class="mt-auto ">
+			<div class="mt-auto">
 					<Nav />
 			</div>
 		</div>

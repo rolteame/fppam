@@ -13,7 +13,7 @@ const onMouseLeave = (event: any) => {
 };
 </script>
 <template>
-	<div class="font-body pt-32 lg:w-[60%] md:w-[80%] mx-auto hidden md:block">
+	<div class="font-body pt-32 lg:w-[60%] md:w-[80%] mx-auto hidden lg:block">
 		<ul class="grid grid-cols-5 text-[20px]">
 			<li class="px-2 inline-block">
 				<NuxtLink to="/">Home</NuxtLink>
