@@ -4,17 +4,30 @@ const isMobileMenuOpen = ref(false);
 const closeMobileMenu = () => {
 	isMobileMenuOpen.value = false
 }
+
+const isDropdownOpen = ref(false);
+
+const onMouseLeave = (event: any) => {
+	if (
+		!event.relatedTarget ||
+		!event.currentTarget.contains(event.relatedTarget)
+	) {
+    setTimeout(() => {
+      isDropdownOpen.value = false;
+    }, 200)
+	}
+};
 </script>
 <template>
 	<img
 		src="~/assets/img/pepicons-pop_menu.svg"
 		alt="mobile menu icon"
-		class="w-10 lg:hidden"
+		class="w-10 lg:hidden -mt-4"
     :class="isMobileMenuOpen ? 'invisible' : 'visible'"
 		@click="isMobileMenuOpen = !isMobileMenuOpen"
 	/>
 
-	<div class="absolute bg-white p-4 w-[250px] md:-mt-14 md:text-lg text-md lg:hidden" v-show="isMobileMenuOpen" :class="isMobileMenuOpen ? 'animate__animated animate__fadeInLeft animate__faster' : 'animate__animated animate__backOutLeft'">
+	<div class="absolute bg-white p-4 w-[250px] h-auto md:-mt-14 md:text-lg text-md lg:hidden -mt-16 font-bold" v-show="isMobileMenuOpen" :class="isMobileMenuOpen || isDropdownOpen ? 'animate__animated animate__fadeInLeft animate__faster h-auto' : 'animate__animated animate__backOutLeft'">
 		<div>
 			<img src="~/assets/img/ic_outline-arrow-back-ios.svg" alt="mobile back icon" class="w-6 font-bold font-body" @click="closeMobileMenu()">
 		</div>
@@ -23,31 +36,36 @@ const closeMobileMenu = () => {
 				<NuxtLink to="/">Home</NuxtLink>
 			</li>
 			<li
-				class=""
+				class="inline-block"
+				@mouseenter="isDropdownOpen  = true"
+				@mouseleave="onMouseLeave"
 			>
 				<NuxtLink to="">Who We Are</NuxtLink>
 				<ul
-					class=""
+					class=" bg-white text-black text-left w-[220px] px-5 py-3 absolute ml-32 -mt-8"
+          :class="isDropdownOpen ? 'animate__animated animate__fadeIn animate__faster' : 'animate__animated animate__backOutUp'"
+					v-show="isDropdownOpen"
+					@mouseleave="onMouseLeave"
 				>
-					<li class="">
+					<li class="px-2 py-2 inline-block list-disc">
 						<NuxtLink to="">Our History</NuxtLink>
 					</li>
-					<li class="">
+					<li class="px-2 py-2 inline-block list-disc">
 						<NuxtLink to="">Mission and Vision</NuxtLink>
 					</li>
-					<li class="">
+					<li class="px-2 py-2 inline-block list-disc">
 						<NuxtLink to="">Our Belief</NuxtLink>
 					</li>
-					<li class="">
+					<li class="px-2 py-2 inline-block list-disc">
 						<NuxtLink to="">Our Structure</NuxtLink>
 					</li>
 				</ul>
 			</li>
-			<li class="">
+			<li class="py-2">
 				<NuxtLink to="">Online Giving</NuxtLink>
 			</li>
-			<li class=""><NuxtLink to="">Listen</NuxtLink></li>
-			<li class=""><NuxtLink to="">Contact Us</NuxtLink></li>
+			<li class="py-2"><NuxtLink to="">Listen</NuxtLink></li>
+			<li class="py-2"><NuxtLink to="">Contact Us</NuxtLink></li>
 		</ul>
 	</div>
 </template>
