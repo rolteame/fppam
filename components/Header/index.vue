@@ -1,8 +1,9 @@
 
 <template>
 	<div
-		class="container-fluid bg-[url('~/assets/img/hero.png')] bg-cover bg-center bg-no-repeat flex flex-col justify-center saturate-100 py-6"
+		class="container-fluid bg-[url('~/assets/img/hero.png')] bg-cover bg-center bg-no-repeat flex flex-col justify-center saturate-100 py-6 px-4"
 	>
+    <NavMobileNav />
 		<div class="h-full w-full flex flex-col justify-center text-center text-white font-header">
 			<img src="~/assets/img/logo.png" alt="FPPAM Logo" class="w-32 mx-auto" />
 			<div class="container-md flex justify-center">
