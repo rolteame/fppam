@@ -14,7 +14,7 @@ const closeMobileMenu = () => {
 		@click="isMobileMenuOpen = !isMobileMenuOpen"
 	/>
 
-	<div class="absolute bg-white p-4 w-[250px] md:-mt-6 sm:mt-4 text-lg lg:hidden" v-show="isMobileMenuOpen" :class="isMobileMenuOpen ? 'animate__animated animate__fadeInLeft animate__faster' : 'animate__animated animate__backOutLeft'">
+	<div class="absolute bg-white p-4 w-[250px] md:-mt-14 md:text-lg text-md lg:hidden" v-show="isMobileMenuOpen" :class="isMobileMenuOpen ? 'animate__animated animate__fadeInLeft animate__faster' : 'animate__animated animate__backOutLeft'">
 		<div>
 			<img src="~/assets/img/ic_outline-arrow-back-ios.svg" alt="mobile back icon" class="w-6 font-bold font-body" @click="closeMobileMenu()">
 		</div>
