@@ -10,7 +10,7 @@ const closeMobileMenu = () => {
 		src="~/assets/img/pepicons-pop_menu.svg"
 		alt="mobile menu icon"
 		class="w-10 lg:hidden"
-    :class="isMobileMenuOpen ? 'hidden' : 'block'"
+    :class="isMobileMenuOpen ? 'invisible' : 'visible'"
 		@click="isMobileMenuOpen = !isMobileMenuOpen"
 	/>
 
