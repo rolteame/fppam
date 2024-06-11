@@ -68,7 +68,7 @@ const onSubmit = form.handleSubmit((values) => {
 	<div class="border-b mx-8 pt-2">
 	</div>
 	<div>
-		<p class="text-[12px] ms-8 py-8"><span>&copy </span><span>2024 </span><span class="font-bold">FREEDOM POWER PACKER ANOINTED MINISTRY </span><span>All Rights Reserved.</span></p>
+		<p class="text-[12px] mx-8 py-8 text-center"><span>&copy </span><span>2024 </span><span class="font-bold">FREEDOM POWER PACKER ANOINTED MINISTRY </span><span>All Rights Reserved.</span></p>
 	</div>
 </div>
 </template>
