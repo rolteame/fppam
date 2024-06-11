@@ -27,7 +27,7 @@ const onMouseLeave = (event: any) => {
 		@click="isMobileMenuOpen = !isMobileMenuOpen"
 	/>
 
-	<div class="absolute bg-white p-4 w-[250px] h-auto md:-mt-14 md:text-lg text-md lg:hidden -mt-16 font-bold" v-show="isMobileMenuOpen" :class="isMobileMenuOpen || isDropdownOpen ? 'animate__animated animate__fadeInLeft animate__faster h-auto' : 'animate__animated animate__backOutLeft'">
+	<div class="absolute bg-white p-4 w-[250px] h-auto md:-mt-14 md:text-lg text-md lg:hidden -mt-16" v-show="isMobileMenuOpen" :class="isMobileMenuOpen || isDropdownOpen ? 'animate__animated animate__fadeInLeft animate__faster h-auto' : 'animate__animated animate__backOutLeft'">
 		<div>
 			<img src="~/assets/img/ic_outline-arrow-back-ios.svg" alt="mobile back icon" class="w-6 font-bold font-body" @click="closeMobileMenu()">
 		</div>
@@ -42,7 +42,7 @@ const onMouseLeave = (event: any) => {
 			>
 				<NuxtLink to="">Who We Are</NuxtLink>
 				<ul
-					class=" bg-white text-black text-left w-[220px] px-5 py-3 absolute ml-32 -mt-8"
+					class=" bg-white text-black text-left w-[180px] px-5 py-3 absolute ml-32 -mt-8"
           :class="isDropdownOpen ? 'animate__animated animate__fadeIn animate__faster' : 'animate__animated animate__backOutUp'"
 					v-show="isDropdownOpen"
 					@mouseleave="onMouseLeave"

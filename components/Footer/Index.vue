@@ -27,8 +27,8 @@ const onSubmit = form.handleSubmit((values) => {
 </script>
 
 <template>
-<div class="grid grid-cols-2 lg:grid-cols-1 lg:p-2 bg-[#113C6F] text-white font-body">
-  <div class="pr-8 pl-8 pt-8 mt-4 lg:flex lg:py-8">
+<div class="grid grid-cols-2 lg:grid-cols-1 lg:grid-rows-2 lg:p-2 bg-[#113C6F] text-white font-body">
+  <div class="pr-8 pl-6 pt-8 mt-4 lg:flex lg:py-8">
     <ul class="grid grid-rows-5 text-[16px] pb-7 lg:grid-rows-1 lg:flex lg:w-[60%] lg:mr-14">
 			<li class="inline-block footer py-2 lg:mr-12">
 				<NuxtLink to="/">Home</NuxtLink>
@@ -58,8 +58,10 @@ const onSubmit = form.handleSubmit((values) => {
 			</form>
 		</div>
   </div>
-  <div class="px-8 pt-8 mt-4 lg:order-first ml-auto">
-		<img src="~/assets/img/logo.png" alt="FPPAM Logo" class="w-24" />
+  <div class="lg:order-first lg:flex lg:justify-start">
+		<div class="px-8 pt-8 mt-4">
+		<img src="~/assets/img/logo.png" alt="FPPAM Logo" class="w-24 ml-auto" />
+	</div>
 	</div>
 </div>
 <div class="bg-[#113C6F] text-white text-[12px] -mt-1">
